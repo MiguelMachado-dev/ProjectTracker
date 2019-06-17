@@ -8,8 +8,6 @@ module.exports = (sequelize, DataTypes) => {
     },
     {}
   )
-  Project.associate = models => {
-    Project.belongsTo(models.User, { foreignKey: 'user_id' })
-  }
+  Project.belongsTo(models.User)
   return Project
 }
